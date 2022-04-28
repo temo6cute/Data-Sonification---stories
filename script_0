@@ -19,9 +19,10 @@ note3 = makeconverter(makeconverter(input3, "midipch"), "pchmidi")
 note4 = makeconverter(makeconverter(input4, "midipch"), "pchmidi")
 note5 = makeconverter(makeconverter(input5, "midipch"), "pchmidi")
 
-// Duration is 2 minutes 44 seconds
-WAVETABLE(0, 2 * 60 + 44, 15000, note1 + 0.02 * (cad), 0.5)
-WAVETABLE(0, 2 * 60 + 44, 15000, note2 + 0.02 * (cad), 0.5)
-WAVETABLE(0, 2 * 60 + 44, 15000, note3 + 0.02 * (cad), 0.5)
-WAVETABLE(0, 2 * 60 + 44, 15000, note4 + 0.02 * (cad), 0.5)
-WAVETABLE(0, 2 * 60 + 44, 15000, note5 + 0.02 * (cad), 0.5)
+// Duration is 1 minutes 26 seconds
+duration = 60 + 26
+WAVETABLE(0, duration, 10000, note1 + 0.02 * (cad), 0.5)
+WAVETABLE(0, duration, 7000, note2 + 0.02 * (cad), 0.5)
+WAVETABLE(0, duration, 10000, note3 + 0.02 * (cad), 0.5)
+WAVETABLE(0, duration, 10000, note4 + 0.02 * (cad), 0.5)
+WAVETABLE(0, duration, 7000, note5 + 0.02 * (cad), 0.5)

@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 809.0, 199.0, 647.0, 513.0 ],
+		"rect" : [ 831.0, 372.0, 647.0, 513.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -205,7 +205,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
 					"patching_rect" : [ 198.5, 337.0, 92.5, 22.0 ],
-					"save" : [ "#N", "rtcmix~", 2, 6, ";", "#X", "restore", 0, 1208, 1208, "\n// These are the inputs from Wekinator\ninput1 = makeconnection(\"inlet\", 1, 6.0)\ninput2 = makeconnection(\"inlet\", 2, 8.0)\ninput3 = makeconnection(\"inlet\", 3, 8.04)\ninput4 = makeconnection(\"inlet\", 4, 8.07)\ninput5 = makeconnection(\"inlet\", 5, 9.0)\n\n// The 'cadence' or key for the note at this time\n// cad of 1 means we are in the main (tonic) note\n// cad of 5 means this is the fifth, and so on\ncad = makeconnection(\"inlet\", 6, 1)\n\n// 'clip' the note to 2 decimals by going to MIDI and back,\n// then add the increment to each note\r\nnote1 = makeconverter(makeconverter(input1, \"midipch\"), \"pchmidi\")\r\nnote2 = makeconverter(makeconverter(input2, \"midipch\"), \"pchmidi\")\r\nnote3 = makeconverter(makeconverter(input3, \"midipch\"), \"pchmidi\")\r\nnote4 = makeconverter(makeconverter(input4, \"midipch\"), \"pchmidi\")\r\nnote5 = makeconverter(makeconverter(input5, \"midipch\"), \"pchmidi\")\n\r\n// Duration is 2 minutes 44 seconds\nWAVETABLE(0, 2 * 60 + 44, 15000, note1 + 0.02 * (cad), 0.5)\nWAVETABLE(0, 2 * 60 + 44, 15000, note2 + 0.02 * (cad), 0.5)\nWAVETABLE(0, 2 * 60 + 44, 15000, note3 + 0.02 * (cad), 0.5)\nWAVETABLE(0, 2 * 60 + 44, 15000, note4 + 0.02 * (cad), 0.5)\nWAVETABLE(0, 2 * 60 + 44, 15000, note5 + 0.02 * (cad), 0.5)", ";" ],
+					"save" : [ "#N", "rtcmix~", 2, 6, ";", "#X", "restore", 0, 1211, 1211, "\n// These are the inputs from Wekinator\ninput1 = makeconnection(\"inlet\", 1, 6.0)\ninput2 = makeconnection(\"inlet\", 2, 8.0)\ninput3 = makeconnection(\"inlet\", 3, 8.04)\ninput4 = makeconnection(\"inlet\", 4, 8.07)\ninput5 = makeconnection(\"inlet\", 5, 9.0)\n\n// The 'cadence' or key for the note at this time\n// cad of 1 means we are in the main (tonic) note\n// cad of 5 means this is the fifth, and so on\ncad = makeconnection(\"inlet\", 6, 1)\n\n// 'clip' the note to 2 decimals by going to MIDI and back,\n// then add the increment to each note\r\nnote1 = makeconverter(makeconverter(input1, \"midipch\"), \"pchmidi\")\r\nnote2 = makeconverter(makeconverter(input2, \"midipch\"), \"pchmidi\")\r\nnote3 = makeconverter(makeconverter(input3, \"midipch\"), \"pchmidi\")\r\nnote4 = makeconverter(makeconverter(input4, \"midipch\"), \"pchmidi\")\r\nnote5 = makeconverter(makeconverter(input5, \"midipch\"), \"pchmidi\")\n\r\n// Duration is 1 minutes 26 seconds\r\nduration = 60 + 26\nWAVETABLE(0, duration, 10000, note1 + 0.02 * (cad), 0.5)\nWAVETABLE(0, duration, 7000, note2 + 0.02 * (cad), 0.5)\nWAVETABLE(0, duration, 10000, note3 + 0.02 * (cad), 0.5)\nWAVETABLE(0, duration, 10000, note4 + 0.02 * (cad), 0.5)\nWAVETABLE(0, duration, 7000, note5 + 0.02 * (cad), 0.5)", ";" ],
 					"text" : "rtcmix~ 2 6"
 				}
 
