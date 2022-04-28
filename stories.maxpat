@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 371.0, 203.0, 640.0, 480.0 ],
+		"rect" : [ 809.0, 199.0, 647.0, 513.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,18 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-19",
+					"maxclass" : "number",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 493.0, 253.0, 50.0, 22.0 ]
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-12",
 					"maxclass" : "newobj",
@@ -71,7 +83,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 406.0, 218.0, 50.0, 22.0 ]
+					"patching_rect" : [ 435.0, 253.0, 50.0, 22.0 ]
 				}
 
 			}
@@ -84,7 +96,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 354.0, 194.0, 50.0, 22.0 ]
+					"patching_rect" : [ 380.0, 253.0, 50.0, 22.0 ]
 				}
 
 			}
@@ -97,7 +109,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 317.0, 232.0, 50.0, 22.0 ]
+					"patching_rect" : [ 324.5, 253.0, 50.0, 22.0 ]
 				}
 
 			}
@@ -110,7 +122,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 284.5, 203.0, 50.0, 22.0 ]
+					"patching_rect" : [ 269.0, 253.0, 50.0, 22.0 ]
 				}
 
 			}
@@ -123,7 +135,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 225.0, 203.0, 50.0, 22.0 ]
+					"patching_rect" : [ 213.0, 253.0, 50.0, 22.0 ]
 				}
 
 			}
@@ -144,10 +156,10 @@
 					"id" : "obj-6",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 5,
-					"outlettype" : [ "float", "float", "float", "float", "float" ],
-					"patching_rect" : [ 277.0, 143.0, 114.0, 22.0 ],
-					"text" : "unpack 1. 1. 1. 1. 1."
+					"numoutlets" : 6,
+					"outlettype" : [ "float", "float", "float", "float", "float", "float" ],
+					"patching_rect" : [ 277.0, 143.0, 127.0, 22.0 ],
+					"text" : "unpack 1. 1. 1. 1. 1. 1."
 				}
 
 			}
@@ -181,7 +193,7 @@
 					"maxclass" : "ezdac~",
 					"numinlets" : 2,
 					"numoutlets" : 0,
-					"patching_rect" : [ 206.0, 378.0, 45.0, 45.0 ]
+					"patching_rect" : [ 190.0, 395.0, 45.0, 45.0 ]
 				}
 
 			}
@@ -189,12 +201,12 @@
 				"box" : 				{
 					"id" : "obj-1",
 					"maxclass" : "newobj",
-					"numinlets" : 7,
+					"numinlets" : 8,
 					"numoutlets" : 3,
 					"outlettype" : [ "signal", "signal", "" ],
-					"patching_rect" : [ 206.0, 292.0, 176.0, 22.0 ],
-					"save" : [ "#N", "rtcmix~", 2, 5, ";", "#X", "restore", 0, 362, 362, "f1 = makeconnection(\"inlet\", 1, 6.0)\r\nf2 = makeconnection(\"inlet\", 2, 8.0)\r\nf3 = makeconnection(\"inlet\", 3, 8.04)\r\nf4 = makeconnection(\"inlet\", 4, 8.07)\r\nf5 = makeconnection(\"inlet\", 5, 9.0)\r\n\r\nWAVETABLE(0, 99, 15000, f1, 0.5)\r\nWAVETABLE(0, 99, 15000, f2, 0.5)\r\nWAVETABLE(0, 99, 15000, f3, 0.5)\r\nWAVETABLE(0, 99, 15000, f4, 0.5)\r\nWAVETABLE(0, 99, 15000, f5, 0.5)", ";" ],
-					"text" : "rtcmix~ 2 5"
+					"patching_rect" : [ 198.5, 337.0, 92.5, 22.0 ],
+					"save" : [ "#N", "rtcmix~", 2, 6, ";", "#X", "restore", 0, 1208, 1208, "\n// These are the inputs from Wekinator\ninput1 = makeconnection(\"inlet\", 1, 6.0)\ninput2 = makeconnection(\"inlet\", 2, 8.0)\ninput3 = makeconnection(\"inlet\", 3, 8.04)\ninput4 = makeconnection(\"inlet\", 4, 8.07)\ninput5 = makeconnection(\"inlet\", 5, 9.0)\n\n// The 'cadence' or key for the note at this time\n// cad of 1 means we are in the main (tonic) note\n// cad of 5 means this is the fifth, and so on\ncad = makeconnection(\"inlet\", 6, 1)\n\n// 'clip' the note to 2 decimals by going to MIDI and back,\n// then add the increment to each note\r\nnote1 = makeconverter(makeconverter(input1, \"midipch\"), \"pchmidi\")\r\nnote2 = makeconverter(makeconverter(input2, \"midipch\"), \"pchmidi\")\r\nnote3 = makeconverter(makeconverter(input3, \"midipch\"), \"pchmidi\")\r\nnote4 = makeconverter(makeconverter(input4, \"midipch\"), \"pchmidi\")\r\nnote5 = makeconverter(makeconverter(input5, \"midipch\"), \"pchmidi\")\n\r\n// Duration is 2 minutes 44 seconds\nWAVETABLE(0, 2 * 60 + 44, 15000, note1 + 0.02 * (cad), 0.5)\nWAVETABLE(0, 2 * 60 + 44, 15000, note2 + 0.02 * (cad), 0.5)\nWAVETABLE(0, 2 * 60 + 44, 15000, note3 + 0.02 * (cad), 0.5)\nWAVETABLE(0, 2 * 60 + 44, 15000, note4 + 0.02 * (cad), 0.5)\nWAVETABLE(0, 2 * 60 + 44, 15000, note5 + 0.02 * (cad), 0.5)", ";" ],
+					"text" : "rtcmix~ 2 6"
 				}
 
 			}
@@ -243,6 +255,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-1", 7 ],
+					"source" : [ "obj-19", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-1", 2 ],
 					"source" : [ "obj-2", 0 ]
 				}
@@ -266,6 +285,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-10", 0 ],
 					"source" : [ "obj-6", 4 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-19", 0 ],
+					"source" : [ "obj-6", 5 ]
 				}
 
 			}

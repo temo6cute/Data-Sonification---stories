@@ -1,0 +1,27 @@
+
+// These are the inputs from Wekinator
+input1 = makeconnection("inlet", 1, 6.0)
+input2 = makeconnection("inlet", 2, 8.0)
+input3 = makeconnection("inlet", 3, 8.04)
+input4 = makeconnection("inlet", 4, 8.07)
+input5 = makeconnection("inlet", 5, 9.0)
+
+// The 'cadence' or key for the note at this time
+// cad of 1 means we are in the main (tonic) note
+// cad of 5 means this is the fifth, and so on
+cad = makeconnection("inlet", 6, 1)
+
+// 'clip' the note to 2 decimals by going to MIDI and back,
+// then add the increment to each note
+note1 = makeconverter(makeconverter(input1, "midipch"), "pchmidi")
+note2 = makeconverter(makeconverter(input2, "midipch"), "pchmidi")
+note3 = makeconverter(makeconverter(input3, "midipch"), "pchmidi")
+note4 = makeconverter(makeconverter(input4, "midipch"), "pchmidi")
+note5 = makeconverter(makeconverter(input5, "midipch"), "pchmidi")
+
+// Duration is 2 minutes 44 seconds
+WAVETABLE(0, 2 * 60 + 44, 15000, note1 + 0.02 * (cad), 0.5)
+WAVETABLE(0, 2 * 60 + 44, 15000, note2 + 0.02 * (cad), 0.5)
+WAVETABLE(0, 2 * 60 + 44, 15000, note3 + 0.02 * (cad), 0.5)
+WAVETABLE(0, 2 * 60 + 44, 15000, note4 + 0.02 * (cad), 0.5)
+WAVETABLE(0, 2 * 60 + 44, 15000, note5 + 0.02 * (cad), 0.5)
